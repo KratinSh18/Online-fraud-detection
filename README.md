@@ -1,37 +1,48 @@
 # Online Payment Fraud Detection
 
-## Introduction
-Online payment is the most popular transaction method in the world today. However, with an increase in online payments also comes a rise in payment fraud. The objective of this project is to train machine learning models for identifying fraudulent and non-fraudulent payments using historical transaction data from Kaggle.
+## Overview
 
-The dataset consists of 10 variables:
+Online payments have become the predominant mode of transactions worldwide. However, this convenience has also brought about an increase in payment fraud. The objective of this project is to detect and classify fraudulent and non-fraudulent transactions using historical data sourced from Kaggle.
+
+## Dataset
+
+The dataset used in this project contains 10 variables:
 
 - **step**: Represents a unit of time where 1 step equals 1 hour.
-- **type**: Type of online transaction.
+- **type**: Type of online transaction (e.g., payment, transfer, etc.).
 - **amount**: The amount of the transaction.
-- **nameOrig**: Customer starting the transaction.
-- **oldbalanceOrg**: Balance before the transaction.
-- **newbalanceOrig**: Balance after the transaction.
+- **nameOrig**: Customer initiating the transaction.
+- **oldbalanceOrg**: Customer's balance before the transaction.
+- **newbalanceOrig**: Customer's balance after the transaction.
 - **nameDest**: Recipient of the transaction.
-- **oldbalanceDest**: Initial balance of the recipient before the transaction.
-- **newbalanceDest**: The new balance of the recipient after the transaction.
-- **isFraud**: Indicates if the transaction is fraudulent (1) or not (0).
+- **oldbalanceDest**: Recipient's initial balance before the transaction.
+- **newbalanceDest**: Recipient's balance after the transaction.
+- **isFraud**: Binary indicator (1 for fraud, 0 for non-fraudulent transaction).
 
-## Python Libraries
+## Methodology
+
+Machine learning techniques were employed to analyze the dataset and develop models capable of identifying fraudulent activities. Key steps included data preprocessing, exploratory data analysis, feature engineering, model training using algorithms like Random Forest, and evaluation of model performance.
+
+## Project Structure
+
+The project structure includes the following files and directories:
+
+- **data/**: Directory containing the dataset files.
+- **notebooks/**: Jupyter notebooks used for data analysis and model development.
+- **scripts/**: Python scripts for preprocessing, training, and evaluating models.
+- **README.md**: This file providing an overview of the project.
+
+## Requirements
+
+Ensure you have the following libraries installed to run the project:
+
 - pandas
 - numpy
+- scikit-learn
 - seaborn
 - matplotlib
-- tabulate
-- sklearn
 
-Random Forest and Naive Bayes were used to identify online payment fraud due to the large dataset.
+You can install these dependencies using pip:
 
-![image](https://user-images.githubusercontent.com/118715799/210950017-e4d317e0-6bf4-4ecd-8313-9b8121e04e9f.png)
-
-
-## Installation
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/KratinSh18/fraud-detection.git
-   cd fraud-detection
+```bash
+pip install pandas numpy scikit-learn seaborn matplotlib
